@@ -9,7 +9,7 @@ public class Entry {
         CalcFactory calcFactory = new CalcFactory();
         SimpleCalc simpleCalc = (SimpleCalc) calcFactory.getCalc("simple");
         int firstNum = simpleCalc.numpad.userInputCapture();
-        char opn = simpleCalc.opspad.showOpsPad();
+        char opn = simpleCalc.opspad.userInputOpsCapture();
         int secondNum = simpleCalc.numpad.userInputCapture();
         int res = simpleCalc.operate(opn, firstNum, secondNum);
 
