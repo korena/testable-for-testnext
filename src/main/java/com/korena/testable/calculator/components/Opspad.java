@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Opspad {
 
-    public char userInputOpsCapture() {
+    public char userInputOpsCapture( boolean skip) {
         showOpsPad();
-        return getUserChoice();
+        return getUserChoice(skip);
     }
 
     public void showOpsPad() {
@@ -14,9 +14,9 @@ public class Opspad {
         System.out.println("| + | - | x | / |");
         System.out.println("|---|---|---|---|");
     }
-    public char getUserChoice(){
+    public char getUserChoice(boolean skip){
         Scanner read = new Scanner(System.in);
-        return read.next().charAt(0);
+        return !skip?read.next().charAt(0):'+';
     }
 
 

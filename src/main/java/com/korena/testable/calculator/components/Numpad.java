@@ -17,13 +17,13 @@ public class Numpad {
         return "random";
     }
 
-    public int getNumber(){
+    public int getNumber(boolean skip){
         Scanner read = new Scanner(System.in);
-        return read.nextInt();
+        return !skip?read.nextInt():5;
     }
 
-    public int userInputCapture(){
+    public int userInputCapture(boolean skip){
         showNumPad();
-        return getNumber();
+        return getNumber(skip);
     }
 }

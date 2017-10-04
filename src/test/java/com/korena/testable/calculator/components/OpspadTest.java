@@ -1,17 +1,17 @@
-package com.korena.testable.calculator;
+package com.korena.testable.calculator.components;
 
 import static org.junit.Assert.assertTrue;
 
-import com.korena.testable.calculator.components.Opspad;
 import org.junit.Test;
 
 public class OpspadTest {
 
     Opspad opspad = new Opspad();
 
+
     @Test
-    public void showOps() {
-        opspad.showOpsPad();
+    public void testOpspad() {
+        opspad.getUserChoice(true);
         assertTrue(true);
     }
 
